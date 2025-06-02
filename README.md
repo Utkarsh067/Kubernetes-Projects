@@ -179,6 +179,8 @@ Replace <pod-name> with one of the pod names listed under kubectl get pods.
 
 This project walks through deploying a simple Flask web application to a local Kubernetes cluster using Minikube. It covers the entire lifecycle of containerizing the app with Docker, deploying it using YAML configurations, scaling it, and validating service exposure with kubectl and curl. This setup provides a solid foundation for learning Kubernetes and container orchestration in a local development environment.
 
+---
+
 ## 👤 Author
 
 Utkarsh Jain
