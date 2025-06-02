@@ -1,4 +1,4 @@
-# Python Flask App on Kubernetes (Minikube)
+# 🐳 Python Flask App on Kubernetes (Minikube)
 
 This repository demonstrates how to containerize a Python Flask application and deploy it locally to a Kubernetes cluster using Minikube. Follow the steps below to build, deploy, and verify your app.
 
@@ -25,20 +25,23 @@ git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
 ```
 
+---
+
 🔧 Prerequisites
 
 Make sure you have the following tools installed on your local machine:
 
-  Docker
+[Docker](https://docs.docker.com/get-docker/)
 
-  Minikube
+[Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
-  kubectl
+[Kubectl](https://kubernetes.io/docs/tasks/tools/)
 
-  Git
+---
 
 ## 🚀 Step-by-Step Instructions
-### 1. Install Prerequisites
+
+### 📌 1. Install Prerequisites
 
 Ensure Docker, Minikube, and kubectl are installed and available in your PATH. You can verify each installation with:
 
@@ -46,7 +49,7 @@ Ensure Docker, Minikube, and kubectl are installed and available in your PATH. Y
 + ``` minikube version ```
 + ``` kubectl version --client ```
 
-### 2. Start the Minikube Cluster
+### 📌 2. Start the Minikube Cluster
 
 ```minikube start```
 
@@ -54,7 +57,7 @@ Verify that the Minikube node is up and running:
 
 ```kubectl get nodes```
 
-### 3. Build and Load Your Docker Image
+### 📌 3. Build and Load Your Docker Image
 
 In the root of this repository, build your Flask app Docker image:
 
@@ -66,7 +69,7 @@ Load the image into Minikube’s Docker registry:
 
 ⚠️ Minikube runs its own Docker daemon. Using minikube image load ensures your local image becomes available inside the Minikube cluster.
 
-### 4. Deploy to Kubernetes
+### 📌 4. Deploy to Kubernetes
 
 If you've cloned this repository, the required Kubernetes YAML files (deployment.yaml and service.yaml) are already included. You can apply them directly:
 
@@ -114,7 +117,7 @@ spec:
       nodePort: 30008
 ```
 
-### 5. Verify Pods and Services
+### 📌 5. Verify Pods and Services
 
 Check that your pods are running:
 
@@ -136,7 +139,7 @@ You should see something like 5000:30008/TCP under PORT(S).
 ![image](https://github.com/user-attachments/assets/7664745c-ee3f-4e7b-8e36-62aafd3b5762)
 
         
-### 6. Access Your Flask App
+### 📌 6. Access Your Flask App
 
 You can test your deployed Flask application using curl:
 
@@ -148,7 +151,7 @@ If everything is set up correctly, you should see the following HTML output:
 
 ✅ You can also open ```http://$(minikube ip):30008``` in your browser to view the app.
 
-### 7. Scale the Deployment
+### 📌 7. Scale the Deployment
 
 Scale your Deployment up (or down) as needed. For example, to scale to 4 replicas:
 
@@ -160,7 +163,7 @@ Scale your Deployment up (or down) as needed. For example, to scale to 4 replica
 ![image](https://github.com/user-attachments/assets/30f277db-9592-40ea-8fe9-821810185e41)
 
 
-### 8. Inspect Deployment and Logs
+### 📌 8. Inspect Deployment and Logs
 
 ```kubectl describe deployment flask-deployment```
 
@@ -169,3 +172,14 @@ View logs from one of the running pods:
 ```kubectl logs <pod-name>```
 
 Replace <pod-name> with one of the pod names listed under kubectl get pods.
+
+---
+
+## 🧾 Conclusion
+
+This project walks through deploying a simple Flask web application to a local Kubernetes cluster using Minikube. It covers the entire lifecycle of containerizing the app with Docker, deploying it using YAML configurations, scaling it, and validating service exposure with kubectl and curl. This setup provides a solid foundation for learning Kubernetes and container orchestration in a local development environment.
+
+## 👤 Author
+
+Utkarsh Jain
+[LinkedIn](https://www.linkedin.com/in/utkarsh-jain02/)
