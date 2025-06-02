@@ -21,8 +21,8 @@ This repository demonstrates how to containerize a Python Flask application and 
 ## 📥 Clone the Repository
 
 ```
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/Utkarsh067/Kubernetes-Projects.git
+cd Kubernetes-Projects
 ```
 
 ---
@@ -182,4 +182,5 @@ This project walks through deploying a simple Flask web application to a local K
 ## 👤 Author
 
 Utkarsh Jain
+
 [LinkedIn](https://www.linkedin.com/in/utkarsh-jain02/)
